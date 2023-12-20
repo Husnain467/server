@@ -12,7 +12,7 @@ import { handleImageUpload } from './controllers/uploadImageController.js'
 import multer from 'multer';
 
 const app = express();
-const port = "https://hasnaindeploy.vercel.app";
+const port = hasnaindeploy.vercel.app;
 
 app.use(express.json());
 app.use(bodyParser.json({ extended: true }));
