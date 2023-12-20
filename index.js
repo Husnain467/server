@@ -16,7 +16,13 @@ const port = 5000;
 
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(
+    {
+        source:"*",
+        methods:["GET","POST","PUT","UPDATE","DELETE"],
+    }
+
+));
 
 mongoose.connect('mongodb+srv://husnaink467:5262@cluster0.ghk3bf3.mongodb.net/?retryWrites=true&w=majority');
 
